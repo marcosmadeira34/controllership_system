@@ -1,0 +1,2 @@
+# controllership_system
+Customized system for franchises, ideal for controlling deviations from financial indicators and determining whether the calculations of product acquisition costs, taxes on purchase and resale of goods, contribution margins and price formation are in fact, respecting what is reported by the franchisor to the franchisee are, in fact, being practiced, avoiding misuse of resources and losses for the chain's franchises.
