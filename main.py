@@ -23,8 +23,35 @@ print('Extraindo informações fiscais dos arquivos...')
 time.sleep(4.0)
 print('Aguarde um momento...')
 
+
+from genericpath import isfile
+from os import listdir, path
+from os.path import isfile, join
+import time
+from xml.etree import ElementTree as ET
+
+list_xml = []
+def count_file():    
+    path = input("Digte o caminho do arquivo: ")
+    files = [f for f in listdir(path) if isfile(join(path, f))]
+    list_xml.append(files)
+    print("Aguarde...")
+    #time.sleep(4)
+    print(len(files),"notas fiscais localizadas...")
+    time.sleep(4)
+count_file()
+
 # Executando parse no arquivo xml
-tree = Etree.parse(r"07_2018\xml-31180722829604000188550050000405461980273977-nfe.xml")
-print(Etree.tostring(tree.getroot()))
-
-
+def extrair_info():
+    print("Carregando informações fiscais dos arquivos")
+    tree = Etree.parse(r"07_2018\xml-31180722829604000188550050000405461980273977-nfe.xml")
+    time.sleep(3.0)
+    print("Imprimindo infomações capturadas no arquivo")
+    time.sleep(2.0)
+    print("....")
+    print(Etree.tostring(tree.getroot()))
+    root = tree.getroot()
+    print("Infomações carregadas...")
+    time.sleep(2.0)
+    print(root)
+extrair_info() 
