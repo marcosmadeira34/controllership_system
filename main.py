@@ -1,5 +1,5 @@
-# Libries import
 
+from genericpath import isfile
 from os import listdir, path
 from os.path import isfile, join
 import time
@@ -35,4 +35,3 @@ def captura_xml():
         print(cUF, cNF)
 
 captura_xml()
-
