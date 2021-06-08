@@ -1,11 +1,11 @@
-
-from genericpath import isfile
 from os import listdir, path
 from os.path import isfile, join
 import time
 from xml import etree
 import xml.etree.ElementTree as et
 
+
+# creating function to capture xml
 
 list_xml = []
 def captura_xml():    
@@ -16,12 +16,17 @@ def captura_xml():
     print(len(files),"notas fiscais localizadas...")
     time.sleep(3.0)
     directory = path    
+
+# code for directory scanning
+ 
     list_files = []
     files = [f for f in listdir(directory) if f.endswith('.xml')]
     
     for x in files:
         list_files.append(x)
     print(list_files)
+
+# code to parse xml
 
     mytree = et.parse(r'')
     myroot = mytree.getroot()
